@@ -155,7 +155,7 @@ header{
 	}
 
 	.menu__item:nth-child(3){
-		margin-right: 33%;
+		margin-right: auto;
 	}
 	
 	.menu__item:last-child{
