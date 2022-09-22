@@ -3,9 +3,9 @@
 	font-style: normal;
 	font-weight: normal;
 	src: local("TT Lakes"),
-		url("../fonts/TTLakes/TTLakes-regular.ttf") format("ttf"),
-		url("../fonts/TTLakes/TTLakes-regular.woff") format("woff"),
-		url("../fonts/TTLakes/TTLakes-regular.eot") format("eot");
+		url("../fonts/TTLakes/TTLakes-Regular.ttf") format("ttf"),
+		url("../fonts/TTLakes/TTLakes-Regular.woff") format("woff"),
+		url("../fonts/TTLakes/TTLakes-Regular.eot") format("eot");
 }
 
 @font-face{
