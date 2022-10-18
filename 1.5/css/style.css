@@ -136,6 +136,12 @@ img {
 	align-items: center;
 	justify-content: center;
 	background-color: white;
+	transition: 0.5s;
+}
+
+.btn__img:hover {
+	opacity: 0.5;
+	transition: 0.5s;
 }
 
 .swiper-slide.slide-item {
