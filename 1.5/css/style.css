@@ -209,12 +209,12 @@ img {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 16px;
-		height: 160px;
-		transition: height 5s;
+		max-height: 160px;
+		transition: max-height 0.5s;
 	}
 
 	.swiper-wrapper--opened {
-		height: auto;
+		max-height: 340px;
 	}
 
 	.expand-btn {
