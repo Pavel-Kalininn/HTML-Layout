@@ -61,6 +61,7 @@ textarea {
 
 button {
 	cursor: pointer;
+	background-color: transparent;
 }
 
 button::-moz-focus-inner {
@@ -87,11 +88,14 @@ img {
 	color: #7E7E82;
 	letter-spacing: -0.2px;
 	text-transform: uppercase;
-	margin-bottom: 32px;
+	background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
 }
 
 .page-content__section {
 	padding: 15px 0 34px 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
 }
 
 
@@ -122,10 +126,6 @@ img {
 	align-items: center;
 }
 
-.menu__button {
-	background-color: #fff;
-}
-
 .btn__img {
 	display: flex;
 	flex-direction: column;
@@ -135,21 +135,25 @@ img {
 	border: 2px solid #FF3E79;
 	align-items: center;
 	justify-content: center;
-	background-color: white;
 	transition: 0.5s;
 }
 
-.btn__img:hover {
-	opacity: 0.5;
-	transition: 0.5s;
-}
-
-.swiper-slide.slide-item {
+.swiper-slide {
 	width: 240px;
 	height: 72px;
+}
+
+.swiper-slide__link {
+	box-sizing: border-box;
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	padding: 0 16px;
+}
+
+.swiper-slide__link:hover .btn__img {
+	opacity: 0.5;
+	transition: 0.5s;
 }
 
 .expand-btn {
@@ -159,8 +163,6 @@ img {
 	line-height: 24px;
 	letter-spacing: -0.2px;
 	font-weight: bold;
-	margin-bottom: 16px;
-
 }
 
 
@@ -179,7 +181,6 @@ img {
 	line-height: 24px;
 	letter-spacing: -0.2px;
 	font-weight: bold;
-	margin-bottom: 16px;
 }
 
 .shrink-btn::before {
@@ -192,7 +193,7 @@ img {
 }
 
 @media (min-width: 768px) {
-	.swiper-slide.slide-item {
+	.swiper-slide {
 		width: 224px;
 		margin-right: 5px;
 		height: 72px;
@@ -202,28 +203,23 @@ img {
 	.swiper {
 		height: auto;
 		display: flex;
-
-
 	}
 
-	.mySwiper .swiper-wrapper {
-		display: grid;
-		justify-items: center;
-		grid-template-columns: 1fr 1fr 1fr;
-		row-gap: 16px;
-		align-self: center;
-		margin-bottom: 24px;
+	.swiper-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+		height: 160px;
+		transition: height 5s;
+	}
+
+	.swiper-wrapper--opened {
 		height: auto;
-
-	}
-
-	.swiper-wrapper.hidden {
-		height: 165px;
-		overflow: hidden;
 	}
 
 	.expand-btn {
-		display: block;
+		display: flex;
+		align-items: center;
 	}
 
 	.expand-btn:before {
@@ -231,7 +227,8 @@ img {
 	}
 
 	.shrink-btn {
-		display: block;
+		display: flex;
+		align-items: center;
 	}
 
 	.shrink-btn::before {
@@ -249,11 +246,7 @@ img {
 		margin: 0 auto;
 	}
 
-	.mySwiper .swiper-wrapper {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-	}
-
-	.swiper-slide.slide-item {
+	.swiper-slide {
 		width: 240px;
 	}
 }
