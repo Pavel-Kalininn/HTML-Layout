@@ -1,0 +1,43 @@
+.device-type-slide {
+	width: 240px;
+	height: 160px;
+}
+
+.device-type-slide__link {
+	width: 240px;
+	height: 160px;
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+	justify-content: space-between;
+}
+
+.device-type-slide__title {
+	align-self: flex-start;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+	color: #1B1C21;
+}
+
+.device-type-slide__link .swiper-btn__img {
+	align-self: flex-end;
+}
+
+@media (min-width: 768px) {
+	.device-type-slide {
+		width: 224px;
+		height: 160px;
+	}
+
+	.device-type-swiper.swiper-wrapper--opened {
+		max-height: 900px;
+	}
+}
+
+@media(min-width: 1440px) {
+	.device-type-slide {
+		width: 240px;
+		height: 160px;
+	}
+}
