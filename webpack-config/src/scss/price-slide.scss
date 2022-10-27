@@ -1,0 +1,97 @@
+@import "colors.scss";
+
+.price-slide {
+
+		// .price-slide__link
+
+		&__link {
+			width: 260px;
+			height: 200px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: space-between;
+			font-size: 14px;
+			line-height: 18px;
+			letter-spacing: 0.2px;
+			color: $textBlack;
+			padding: 16px;
+
+			@media (min-width: 768px){
+				flex-direction: row;
+				width: 100%;
+				height: 100%;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+
+		// .price-slide__service
+
+		&__service {
+			@media (min-width: 768px){
+				width: 60%;
+			}
+			
+			&::before{
+				content: "Ремонтные услуги";
+				font-size: 14px;
+				line-height: 16px;
+				color: $textGray;
+				mix-blend-mode: normal;
+				opacity: 0.72;
+				display: block;
+				align-self: flex-start;
+
+				@media (min-width: 768px){
+					display: none;
+				}
+			}
+		}
+
+		// .price-slide__price
+
+		&__price {
+			@media (min-width: 768px){
+				flex-grow: 1;
+			}
+			
+			&::before{
+				content: "Цена";
+				font-size: 14px;
+				line-height: 16px;
+				color: $textGray;
+				mix-blend-mode: normal;
+				opacity: 0.72;
+				display: block;
+				align-self: flex-start;
+
+				@media (min-width: 768px){
+					display: none;
+				}
+			}
+		}
+
+		// .price-slide__time
+
+		&__time {
+			@media (min-width: 768px){
+				flex-grow: 1;
+			}
+			
+			&::before{
+				content: "Срок";
+				font-size: 14px;
+				line-height: 16px;
+				color: $textGray;
+				mix-blend-mode: normal;
+				opacity: 0.72;
+				display: block;
+				align-self: flex-start;
+
+				@media (min-width: 768px){
+					display: none;
+				}
+			}
+		}
+}

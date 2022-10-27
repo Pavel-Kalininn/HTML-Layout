@@ -1,0 +1,150 @@
+@import "colors.scss";
+
+.menu__btn {
+	background-color: $white;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.btn__img {
+	display: flex;
+	flex-direction: column;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: $pink;
+	align-items: center;
+	justify-content: center;
+
+	&:hover{
+		opacity: 0.6;
+		transition: 0.5s;
+	}
+}
+
+.menu__logo-btn {
+	background-color: $white;
+}
+
+.btn__label {
+	display: none;
+	margin-right: 8px;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: bold;
+
+	@media (min-width: 1440px){
+		display: inline;
+	}
+}
+
+.swiper-btn__img {
+	display: flex;
+	flex-direction: column;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 2px solid $pink;
+	align-items: center;
+	justify-content: center;
+	transition: 0.5s;
+}
+
+.swiper-expand-btn {
+	display: none;
+	background-color: $white;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+	font-weight: bold;
+
+	@media (min-width: 768px){
+		display: flex;
+		align-items: center;
+	}
+
+	&::before{
+		content: url("../img/expand.svg");
+		display: none;
+		width: 24px;
+		height: 24px;
+		vertical-align: middle;
+
+		@media (min-width: 768px){
+			display: inline-block;
+		}
+	}
+}
+
+.price-btn-label {
+	font-size: 12px;
+	line-height: 24px;
+	text-align: right;
+	letter-spacing: -0.15px;
+	text-transform: uppercase;
+	color: $white;
+}
+
+.price-btn__img {
+	width: 119px;
+	height: 32px;
+	background-color: $pink;
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 4px 12px;
+	position: absolute;
+	bottom: 16px;
+	right: 16px;
+	transition: 0.5s;
+
+	@media (min-width: 768px){
+		position: static;
+	}
+
+	&:hover{
+		opacity: 0.5;
+		transition: 0.5s;
+	}
+}
+
+.shrink-btn {
+	display: none;
+	background-color: $white;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+
+	&::before{
+		content: url("../img/expand.svg");
+		display: none;
+		width: 24px;
+		height: 24px;
+		vertical-align: middle;
+		transform: rotate(180deg);
+		display: inline-block;
+	}
+}
+
+.offer {
+	background-color: transparent;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+	font-weight: bold;
+	align-self: flex-start;
+	text-align: left;
+
+	&::after{
+		content: url("../img/dropdown.svg");
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 9px;
+	}
+}
+

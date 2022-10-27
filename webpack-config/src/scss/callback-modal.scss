@@ -1,0 +1,164 @@
+@import "colors.scss";
+
+.callback-modal {
+	width: 0;
+	height: 100vh;
+	background-color: $white;
+	position: absolute;
+	top: 0;
+	right: -320px;
+	box-shadow: -15px 0 25px -11px $shadow;
+	transition: all 0.5s;
+	z-index: 20;
+	visibility: collapse;
+
+	@media (min-width: 1440px){
+		width: 0;
+		transform: translateX(800px);
+	}
+
+	&::after{
+		@media (min-width: 1440px){
+			content: "";
+			display: inline-block;
+			width: 1px;
+			height: 100vh;
+			background-color: $cyan;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	// .callback-modal__wrapper
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		padding: 24px 16px;
+		gap: 16px;
+	}
+
+	// .callback-modal__header
+
+	&__header {
+		font-size: 24px;
+		line-height: 32px;
+		letter-spacing: -0.6px;
+		color: #1B1C21;
+		padding-bottom: 8px;
+		vertical-align: middle;
+
+		@media (min-width: 1440px){
+			position: relative;
+			top: -40px;
+		}
+
+		&::before{
+			content: "";
+			display: inline-block;
+			width: 4px;
+			height: 40px;
+			border-radius: 0 3px 3px 0;
+			background-color: $cyan;
+			position: relative;
+			right: 16px;
+			top: 10px;
+		}
+	}
+
+	// .callback-modal__input
+
+	&__input {
+		width: 100%;
+		height: 48px;
+		background: $white;
+		border: 1px solid $border;
+		border-radius: 8px;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+		color: $textGray;
+		padding: 12px 16px;
+		outline: none;
+
+		&::placeholder{
+			color: $placeholder;
+		}
+
+		&:focus{
+			border-color: $cyan;
+		}
+	}
+
+	// .callback-modal__warning
+
+	&__warning {
+		font-size: 14px;
+		line-height: 16px;
+		color: $textGray;
+	}
+
+	// .callback-modal__link
+
+	&__link {
+		color: $pink;
+	}
+
+	// .callback-modal__submit
+
+	&__submit {
+		background-color: transparent;
+		align-self: flex-end;
+	}
+
+	//.callback-modal__btn-img
+
+	&__btn-img {
+		width: 136px;
+		height: 32px;
+		background-color: $pink;
+		border-radius: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 4px 12px;
+		transform: 0.5s;
+	
+		&:hover{
+			opacity: 0.5;
+			transition: 0.5s;
+		}
+	}
+
+	// .callback-modal__label
+
+	&__label {
+		font-size: 12px;
+		line-height: 24px;
+		text-align: right;
+		letter-spacing: -0.15px;
+		text-transform: uppercase;
+		color: $white;
+	}
+
+	&__close-btn{
+		@media (min-width: 1440px){
+			position: absolute;
+			top: 32px;
+			left: -65px;
+		}
+	}
+
+	&--opened{
+		width: 320px;
+		transform: translateX(-320px);
+		transition: transform 0.5s;
+		visibility: visible;
+
+		@media (min-width: 1440px){
+			width: 440px;
+			transform: translateX(-320px);
+			visibility: visible;
+		}
+	}
+}

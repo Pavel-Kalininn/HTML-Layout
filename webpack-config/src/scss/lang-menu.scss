@@ -1,0 +1,31 @@
+@import "colors.scss";
+
+.lang-menu {
+
+	// .lang-menu__form
+
+	&__form {
+		display: flex;
+		gap: 7px;
+		color: $textBlack;
+		transition: 0.5s;
+		cursor: pointer;
+	}
+
+	// .lang-menu__lang-select
+
+	&__lang-select[type=radio] {
+		display: none;
+	}
+
+	// .lang-menu__lang-label
+
+	&__lang-label {
+		cursor: pointer;
+
+		&:hover{
+			color: $textGray;
+			transition: 0.5s;
+		}
+	}
+}

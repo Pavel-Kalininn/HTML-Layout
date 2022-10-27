@@ -1,0 +1,8 @@
+.content-wrapper {
+	transition: filter 0.5s;
+
+	&--blurred{
+		filter: blur(5px);
+		transition: filter 0.5s;
+	}
+}

@@ -1,0 +1,48 @@
+@import "colors.scss";
+
+.page-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	align-items: center;
+	padding: 19px 4px;
+
+	@media (min-width: 768px){
+		flex-direction: row;
+		justify-content: space-between;
+		height: 60px;
+		padding: 25px 24px;
+	}
+	// .page-footer__section
+
+	&__section {
+		font-size: 14px;
+		line-height: 16px;
+		text-align: center;
+		color: $textGray;
+		mix-blend-mode: normal;
+		opacity: 0.72;
+
+		&:first-child{
+			@media (min-width: 768px){
+				text-align: left;
+			}
+		}
+
+		&:last-child{
+			@media (min-width: 768px){
+				width: 213px;
+				text-align: right;
+			}
+
+			@media (min-width: 1440px){
+				width: 330px;
+			}
+		}
+	}
+	// .page-footer__link
+
+	&__link {
+		color: $textGray;
+	}
+}

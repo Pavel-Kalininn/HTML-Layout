@@ -1,0 +1,42 @@
+@import "colors.scss";
+
+.brand-swiper {
+
+		// .brand-swiper__slide
+
+		&__slide {
+			width: 240px;
+			height: 72px;
+			border: 1px solid $border;
+			border-radius: 6px;
+
+			@media (min-width: 768px){
+				width: 224px;
+				height: 72px;
+			}
+
+			@media (min-width: 1440px){
+				width: 240px;
+			}
+		}
+
+		// .brand-swiper__link
+
+		&__link {
+			box-sizing: border-box;
+			width: 240px;
+			height: 72px;
+			display: flex;
+			justify-content: space-between;
+			padding: 0 16px;
+			align-items: center;
+
+			&:hover{
+				.swiper-btn__img {
+					opacity: 0.5;
+					transition: 0.5s;
+				}
+			}
+		}
+}
+

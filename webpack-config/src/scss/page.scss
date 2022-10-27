@@ -1,0 +1,56 @@
+@import "colors.scss";
+
+.page {
+	@media (min-width: 1440px){
+		position: relative;
+		width: 1120px;
+	}
+	// .page__page-title
+
+	&__page-title {
+		font-size: 28px;
+		font-weight: bold;
+		line-height: 40px;
+		letter-spacing: -0.6px;
+		vertical-align: middle;
+		margin-left: 16px;
+
+		@media (min-width: 768px){
+			margin-left: 24px;
+		}
+
+		@media (min-width: 1440px) {
+			position: absolute;
+			top: -65px;
+			left: 32px;
+			margin: 0;
+			vertical-align: middle;
+		}
+
+		&::before{
+			content: "";
+			display: inline-block;
+			width: 4px;
+			height: 40px;
+			border-radius: 0 3px 3px 0;
+			background-color: $cyan;
+			position: relative;
+			right: 16px;
+			top: 10px;
+
+			@media (min-width: 768px){
+				right: 24px;
+			}
+
+			@media (min-width: 1440px){
+				right: 32px;
+			}
+		}
+	}
+}
+
+.page-content{
+	@media (min-width: 1440px){
+		width: 1120px
+	}
+}
