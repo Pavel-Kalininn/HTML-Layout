@@ -5,6 +5,13 @@
 	display: flex;
 	align-items: center;
 	cursor: pointer;
+
+	&:hover{
+		.btn__img{
+			opacity: 0.6;
+			transition: 0.5s;
+		}
+	}		
 }
 
 .btn__img {
@@ -137,14 +144,15 @@
 	line-height: 24px;
 	letter-spacing: -0.2px;
 	font-weight: bold;
+	display: flex;
+	gap: 9px;
 	align-self: flex-start;
 	text-align: left;
+	align-content: center;
 
 	&::after{
 		content: url("../img/dropdown.svg");
 		display: inline-block;
-		vertical-align: middle;
-		margin-left: 9px;
 	}
 }
 

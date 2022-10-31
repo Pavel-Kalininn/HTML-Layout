@@ -9,14 +9,7 @@
 	}
 	// .section-swiper__title
 
-	&__title {
-		font-size: 16px;
-		line-height: 24px;
-		color: #7E7E82;
-		letter-spacing: -0.2px;
-		text-transform: uppercase;
-		background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
-	}
+	
 }
 .swiper {
 	width: 100%;
@@ -41,8 +34,4 @@
 .swiper-pagination {
 	position: relative;
 	margin-top: 15px;
-
-	@media (min-width: 768px){
-		display: none;
-	}
 }

@@ -6,6 +6,16 @@
 		display: inline-block;
 		height: 1px;
 		width: 100%;
-		background-color: $cyan;
+		background-color: $divider;
+	}
+
+	&__title {
+		font-size: 16px;
+		line-height: 24px;
+		color: #7E7E82;
+		letter-spacing: -0.2px;
+		text-transform: uppercase;
+		padding: 16px 32px;
+		background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
 	}
 }

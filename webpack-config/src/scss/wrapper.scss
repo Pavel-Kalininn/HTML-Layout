@@ -1,6 +1,6 @@
 .wrapper {
 	width: 100%;
-	overflow: hidden;
+	overflow-x: hidden;
 
 	@media (min-width: 1440px){
 		width: 1440px;
@@ -8,6 +8,6 @@
 		display: flex;
 		justify-content: space-between;
 		position: relative;
-		overflow: unset;
+		overflow-x: unset;
 	}
 }
